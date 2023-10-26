@@ -40,18 +40,18 @@ Zephyr is a series of language models that are trained to act as helpful assista
 
 ## Performance
 
-![image/png](https://cdn-uploads.huggingface.co/production/uploads/6200d0a443eb0913fa2df7cc/raxvt5ma16d7T23my34WC.png)
+At the time of release, Zephyr-7B-β is the highest ranked 7B chat model on the [MT-Bench](https://huggingface.co/spaces/lmsys/mt-bench) and [AlpacaEval](https://tatsu-lab.github.io/alpaca_eval/) benchmarks:
 
-| Model | Size | Align | MT-Bench (score) | AlpacaEval (win %) |
+| Model | Size | Alignment | MT-Bench (score) | AlpacaEval (win rate %) |
 |-------------|-----|----|---------------|--------------|
 | StableLM-Tuned-α | 7B| dSFT |2.75| -|
 | MPT-Chat |  7B |dSFT |5.42| -|
 | Xwin-LMv0.1 | 7B| dPPO| 6.19| 87.83|
 | Mistral-Instructv0.1 | 7B|  - | 6.84 |-|
 | Zephyr-7b-α |7B|  dDPO| 6.88| -|
-| **Zephyr-7b-β** |7B|  dDPO| 7.34| 90.60|
+| **Zephyr-7b-β** 🪁 | **7B** | **dDPO** | **7.34** | **90.60** |
 | Falcon-Instruct |  40B |dSFT |5.17 |45.71|
-| Guanaco 65B |  SFT |6.41| 71.80|
+| Guanaco | 65B |  SFT |6.41| 71.80|
 | Llama2-Chat |  70B |RLHF |6.86| 92.66|
 | Vicuna v1.3 |  33B |dSFT |7.12 |88.99|
 | WizardLM v1.0 |  70B |dSFT |7.71 |-|
@@ -59,6 +59,13 @@ Zephyr is a series of language models that are trained to act as helpful assista
 | GPT-3.5-turbo | - |RLHF |7.94 |89.37|
 | Claude 2 |  - |RLHF |8.06| 91.36|
 | GPT-4 |  -| RLHF |8.99| 95.28|
+
+In particular, on several categories of MT-Bench, Zephyr-7B-β has strong performance compared to larger open models like Llama2-Chat-70B:
+
+![image/png](https://cdn-uploads.huggingface.co/production/uploads/6200d0a443eb0913fa2df7cc/raxvt5ma16d7T23my34WC.png)
+
+However, on more complex tasks like coding and mathematics, Zephyr-7B-β lags behind proprietary models and more research is needed to close the gap.
+
 
 ## Intended uses & limitations
 
@@ -108,9 +115,8 @@ It is also unknown what the size and composition of the corpus was used to train
 
 ## Training and evaluation data
 
-This model is a fine-tuned version of [HuggingFaceH4/mistral-7b-ift](https://huggingface.co/HuggingFaceH4/mistral-7b-ift) TODO on the ultrafeedback dataset. It achieves the following results on the evaluation set:
+During DPO training, this model achieves the following results on the evaluation set:
 
-It achieves the following results on the evaluation set:
 - Loss: 0.7496
 - Rewards/chosen: -4.5221
 - Rewards/rejected: -8.3184
@@ -139,6 +145,9 @@ The following hyperparameters were used during training:
 - num_epochs: 3.0
 
 ### Training results
+
+The table below shows the full set of DPO training metrics:
+
 
 | Training Loss | Epoch | Step | Validation Loss | Rewards/chosen | Rewards/rejected | Rewards/accuracies | Rewards/margins | Logps/rejected | Logps/chosen | Logits/rejected | Logits/chosen |
 |:-------------:|:-----:|:----:|:---------------:|:--------------:|:----------------:|:------------------:|:---------------:|:--------------:|:------------:|:---------------:|:-------------:|
