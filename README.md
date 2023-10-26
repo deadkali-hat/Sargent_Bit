@@ -10,6 +10,7 @@ datasets:
 - HuggingFaceH4/ultrafeedback_binarized
 language:
 - en
+base_model: mistralai/Mistral-7B-v0.1
 ---
 
 <!-- This model card has been generated automatically according to the information the Trainer had access to. You
