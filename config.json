@@ -1,5 +1,5 @@
 {
-  "_name_or_path": "HuggingFaceH4/mistral-7b-ift",
+  "_name_or_path": "HuggingFaceH4/zephyr-7b-beta",
   "architectures": [
     "MistralForCausalLM"
   ],
