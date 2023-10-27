@@ -37,6 +37,7 @@ Zephyr is a series of language models that are trained to act as helpful assista
 
 - **Repository:** https://github.com/huggingface/alignment-handbook
 - **Demo:** https://huggingface.co/spaces/HuggingFaceH4/zephyr-chat
+- **Chatbot Arena:** Evaluate Zephyr 7B against 10+ LLMs in the LMSYS arena: http://arena.lmsys.org
 
 ## Performance
 
