@@ -218,3 +218,18 @@ The table below shows the full set of DPO training metrics:
 - Pytorch 2.0.1+cu118
 - Datasets 2.12.0
 - Tokenizers 0.14.0
+
+## Citation
+
+If you find Zephyr-7B-β is useful in your work, please cite it with:
+
+```
+@misc{tunstall2023zephyr,
+      title={Zephyr: Direct Distillation of LM Alignment}, 
+      author={Lewis Tunstall and Edward Beeching and Nathan Lambert and Nazneen Rajani and Kashif Rasul and Younes Belkada and Shengyi Huang and Leandro von Werra and Clémentine Fourrier and Nathan Habib and Nathan Sarrazin and Omar Sanseviero and Alexander M. Rush and Thomas Wolf},
+      year={2023},
+      eprint={2310.16944},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
+```
