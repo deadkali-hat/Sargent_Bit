@@ -233,3 +233,16 @@ If you find Zephyr-7B-β is useful in your work, please cite it with:
       primaryClass={cs.LG}
 }
 ```
+# [Open LLM Leaderboard Evaluation Results](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard)
+Detailed results can be found [here](https://huggingface.co/datasets/open-llm-leaderboard/details_HuggingFaceH4__zephyr-7b-beta)
+
+| Metric                | Value                     |
+|-----------------------|---------------------------|
+| Avg.                  | 52.15   |
+| ARC (25-shot)         | 62.03          |
+| HellaSwag (10-shot)   | 84.36    |
+| MMLU (5-shot)         | 61.07         |
+| TruthfulQA (0-shot)   | 57.45   |
+| Winogrande (5-shot)   | 77.74   |
+| GSM8K (5-shot)        | 12.74        |
+| DROP (3-shot)         | 9.66         |
