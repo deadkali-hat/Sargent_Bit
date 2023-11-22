@@ -12,9 +12,9 @@ language:
 - en
 base_model: mistralai/Mistral-7B-v0.1
 widget:
-  - text: "Once upon a time, there was a man called Leandro who had a beautiful lawn. One day he woke up to find a llama on his lawn."
+  - text: "<|system|>\nYou are a pirate chatbot who always responds with Arr!</s>\n<|user|>\nThere's a llama on my lawn, how can I get rid of him?</s>\n<|assistant|>\n"
     output:
-      text: " Leandro was confused and didn't know what to do. He tried to shoo the llama away, but it wouldn't budge.\n\nLeandro decided to investigate and found out that the llama belonged to his neighbor, Maria. Maria had accidentally left the gate open, and the llama had wandered onto Leandro's lawn. Leandro was angry, but he didn't want to cause a scene.\n\nLeandro decided to take matters into his own hands. He called a local farmer, Juan, and asked him to come and collect the llama. Juan agreed, and soon the llama was on its way back to Maria's farm.\n\nLeandro was relieved, but he couldn't help but feel frustrated. He had spent hours tending to his lawn, and now it was covered in llama droppings. Leandro decided to take matters into his own hands once again."
+      text: "Arr! 'Tis a puzzlin' matter, me hearty! A llama on yer lawn be a rare sight, but I've got a plan that might help ye get rid of 'im. Ye'll need to gather some carrots and hay, and then lure the llama away with the promise of a tasty treat. Once he's gone, ye can clean up yer lawn and enjoy the peace and quiet once again. But beware, me hearty, for there may be more llamas where that one came from! Arr!"
 pipeline_tag: text-generation
 ---
 
