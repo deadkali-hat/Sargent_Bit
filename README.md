@@ -11,6 +11,11 @@ datasets:
 language:
 - en
 base_model: mistralai/Mistral-7B-v0.1
+widget:
+  - text: "Once upon a time, there was a man called Leandro who had a beautiful lawn. One day he woke up to find a llama on his lawn."
+    output:
+      text: " Leandro was confused and didn't know what to do. He tried to shoo the llama away, but it wouldn't budge.\n\nLeandro decided to investigate and found out that the llama belonged to his neighbor, Maria. Maria had accidentally left the gate open, and the llama had wandered onto Leandro's lawn. Leandro was angry, but he didn't want to cause a scene.\n\nLeandro decided to take matters into his own hands. He called a local farmer, Juan, and asked him to come and collect the llama. Juan agreed, and soon the llama was on its way back to Maria's farm.\n\nLeandro was relieved, but he couldn't help but feel frustrated. He had spent hours tending to his lawn, and now it was covered in llama droppings. Leandro decided to take matters into his own hands once again."
+pipeline_tag: text-generation
 ---
 
 <!-- This model card has been generated automatically according to the information the Trainer had access to. You
