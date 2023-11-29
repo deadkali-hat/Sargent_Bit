@@ -16,8 +16,7 @@ pipeline_tag: text-generation
 model-index:
 - name: zephyr-7b-beta
   results:
-
-  # AI2 Reasoning Challenge (25-Shot) (Open LLM Leaderboard)
+  # AI2 Reasoning Challenge (25-Shot)
   - task: 
       type: text-generation
       name: Text Generation
@@ -43,7 +42,7 @@ model-index:
       name: Open LLM Leaderboard
       url: https://huggingface.co/datasets/open-llm-leaderboard/details_HuggingFaceH4__zephyr-7b-beta_public
 
-  # HellaSwag (10-shot) (Open LLM Leaderboard)
+  # HellaSwag (10-shot)
   - task: 
       type: text-generation
       name: Text Generation
@@ -68,7 +67,7 @@ model-index:
       name: Open LLM Leaderboard
       url: https://huggingface.co/datasets/open-llm-leaderboard/details_HuggingFaceH4__zephyr-7b-beta_public
 
-  # DROP (3-shot) (Open LLM Leaderboard)
+  # DROP (3-shot)
   - task: 
       type: text-generation
       name: Text Generation
@@ -93,7 +92,7 @@ model-index:
       name: Open LLM Leaderboard
       url: https://huggingface.co/datasets/open-llm-leaderboard/details_HuggingFaceH4__zephyr-7b-beta_public
 
-  # TruthfulQA (0-shot) (Open LLM Leaderboard)
+  # TruthfulQA (0-shot)
   - task: 
       type: text-generation
       name: Text Generation
@@ -117,7 +116,7 @@ model-index:
       name: Open LLM Leaderboard
       url: https://huggingface.co/datasets/open-llm-leaderboard/details_HuggingFaceH4__zephyr-7b-beta_public
 
-  # GSM8k (5-shot) (Open LLM Leaderboard)
+  # GSM8k (5-shot)
   - task: 
       type: text-generation
       name: Text Generation
@@ -137,7 +136,7 @@ model-index:
       name: Open LLM Leaderboard
       url: https://huggingface.co/datasets/open-llm-leaderboard/details_HuggingFaceH4__zephyr-7b-beta_public
 
-  # MMLU (5-Shot) (Open LLM Leaderboard)
+  # MMLU (5-Shot)
   # ???
 
   # AlpacaEval (taken from model card)
@@ -296,7 +295,9 @@ The following hyperparameters were used during training:
 - lr_scheduler_type: linear
 - lr_scheduler_warmup_ratio: 0.1
 - num_epochs: 3.0
+
 ### Training results
+
 The table below shows the full set of DPO training metrics:
 | Training Loss | Epoch | Step | Validation Loss | Rewards/chosen | Rewards/rejected | Rewards/accuracies | Rewards/margins | Logps/rejected | Logps/chosen | Logits/rejected | Logits/chosen |
 |:-------------:|:-----:|:----:|:---------------:|:--------------:|:----------------:|:------------------:|:---------------:|:--------------:|:------------:|:---------------:|:-------------:|
@@ -358,12 +359,16 @@ The table below shows the full set of DPO training metrics:
 | 0.0077        | 2.89  | 5600 | 0.7520          | -4.5586        | -8.3485          | 0.7969             | 3.7899          | -340.4545      | -299.8206    | -2.3078         | -2.3517       |
 | 0.0094        | 2.94  | 5700 | 0.7527          | -4.5542        | -8.3509          | 0.7812             | 3.7967          | -340.4790      | -299.7773    | -2.3062         | -2.3510       |
 | 0.0054        | 2.99  | 5800 | 0.7520          | -4.5169        | -8.3079          | 0.7812             | 3.7911          | -340.0493      | -299.4038    | -2.3081         | -2.3530       |
+
 ### Framework versions
+
 - Transformers 4.35.0.dev0
 - Pytorch 2.0.1+cu118
 - Datasets 2.12.0
 - Tokenizers 0.14.0
+
 ## Citation
+
 If you find Zephyr-7B-β is useful in your work, please cite it with:
 ```
 @misc{tunstall2023zephyr,
