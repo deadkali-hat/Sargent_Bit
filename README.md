@@ -167,6 +167,7 @@ model-index:
     source:
       url: https://huggingface.co/spaces/lmsys/mt-bench
 ---
+
 <!-- This model card has been generated automatically according to the information the Trainer had access to. You
 should probably proofread and complete it, then remove this comment. -->
 
@@ -235,9 +236,12 @@ Here's how you can run the model using the `pipeline()` function from 🤗 Trans
 # Install transformers from source - only needed for versions <= v4.34
 # pip install git+https://github.com/huggingface/transformers.git
 # pip install accelerate
+
 import torch
 from transformers import pipeline
+
 pipe = pipeline("text-generation", model="HuggingFaceH4/zephyr-7b-beta", torch_dtype=torch.bfloat16, device_map="auto")
+
 # We use the tokenizer's chat template to format each message - see https://huggingface.co/docs/transformers/main/en/chat_templating
 messages = [
     {
@@ -299,6 +303,8 @@ The following hyperparameters were used during training:
 ### Training results
 
 The table below shows the full set of DPO training metrics:
+
+
 | Training Loss | Epoch | Step | Validation Loss | Rewards/chosen | Rewards/rejected | Rewards/accuracies | Rewards/margins | Logps/rejected | Logps/chosen | Logits/rejected | Logits/chosen |
 |:-------------:|:-----:|:----:|:---------------:|:--------------:|:----------------:|:------------------:|:---------------:|:--------------:|:------------:|:---------------:|:-------------:|
 | 0.6284        | 0.05  | 100  | 0.6098          | 0.0425         | -0.1872          | 0.7344             | 0.2297          | -258.8416      | -253.8099    | -2.7976         | -2.8234       |
@@ -360,6 +366,7 @@ The table below shows the full set of DPO training metrics:
 | 0.0094        | 2.94  | 5700 | 0.7527          | -4.5542        | -8.3509          | 0.7812             | 3.7967          | -340.4790      | -299.7773    | -2.3062         | -2.3510       |
 | 0.0054        | 2.99  | 5800 | 0.7520          | -4.5169        | -8.3079          | 0.7812             | 3.7911          | -340.0493      | -299.4038    | -2.3081         | -2.3530       |
 
+
 ### Framework versions
 
 - Transformers 4.35.0.dev0
@@ -370,6 +377,7 @@ The table below shows the full set of DPO training metrics:
 ## Citation
 
 If you find Zephyr-7B-β is useful in your work, please cite it with:
+
 ```
 @misc{tunstall2023zephyr,
       title={Zephyr: Direct Distillation of LM Alignment}, 
@@ -382,6 +390,7 @@ If you find Zephyr-7B-β is useful in your work, please cite it with:
 ```
 # [Open LLM Leaderboard Evaluation Results](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard)
 Detailed results can be found [here](https://huggingface.co/datasets/open-llm-leaderboard/details_HuggingFaceH4__zephyr-7b-beta)
+
 | Metric                | Value                     |
 |-----------------------|---------------------------|
 | Avg.                  | 52.15   |
