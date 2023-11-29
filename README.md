@@ -1,9 +1,6 @@
 ---
 tags:
 - generated_from_trainer
-model-index:
-- name: zephyr-7b-beta
-  results: []
 license: mit
 datasets:
 - HuggingFaceH4/ultrachat_200k
@@ -16,8 +13,161 @@ widget:
     output:
       text: "Arr! 'Tis a puzzlin' matter, me hearty! A llama on yer lawn be a rare sight, but I've got a plan that might help ye get rid of 'im. Ye'll need to gather some carrots and hay, and then lure the llama away with the promise of a tasty treat. Once he's gone, ye can clean up yer lawn and enjoy the peace and quiet once again. But beware, me hearty, for there may be more llamas where that one came from! Arr!"
 pipeline_tag: text-generation
----
+model-index:
+- name: zephyr-7b-beta
+  results:
 
+  # AI2 Reasoning Challenge (25-Shot) (Open LLM Leaderboard)
+  - task: 
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: AI2 Reasoning Challenge (25-Shot)
+      type: ai2_arc
+      config: ARC-Challenge
+      split: test
+      args:
+        num_few_shot: 25
+    metrics:
+       - type: acc
+         name: accuracy
+         value: 0.590443686006826
+       - type: acc_stderr
+         value: 0.014370358632472437
+       - type: acc_norm
+         name: normalized accuracy
+         value: 0.6203071672354948
+       - type: acc_norm_stderr
+         value: 0.01418211986697487
+    source:
+      name: Open LLM Leaderboard
+      url: https://huggingface.co/datasets/open-llm-leaderboard/details_HuggingFaceH4__zephyr-7b-beta_public
+
+  # HellaSwag (10-shot) (Open LLM Leaderboard)
+  - task: 
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: HellaSwag (10-Shot)
+      type: Rowan/hellaswag
+      split: test # or validation?
+      args:
+        num_few_shot: 10
+    metrics:
+       - type: acc
+         name: accuracy
+         value: 0.6491734714200359
+       - type: acc_stderr
+         value: 0.004762534245488399
+       - type: acc_norm
+         name: normalized accuracy
+         value: 0.8435570603465445
+       - type: acc_norm_stderr
+         value: 0.003625323221166244
+    source:
+      name: Open LLM Leaderboard
+      url: https://huggingface.co/datasets/open-llm-leaderboard/details_HuggingFaceH4__zephyr-7b-beta_public
+
+  # DROP (3-shot) (Open LLM Leaderboard)
+  - task: 
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: Drop (3-Shot)
+      type: drop
+      split: test
+      args:
+        num_few_shot: 3
+    metrics:
+       - type: em
+         name: exact match
+         value: 0.004928691275167785
+       - type: em_stderr
+         value: 0.0007171872517059793
+       - type: f1
+         name: f1 score
+         value: 0.09662437080536909
+       - type: f1_stderr
+         value: 0.0018807376338089597
+    source:
+      name: Open LLM Leaderboard
+      url: https://huggingface.co/datasets/open-llm-leaderboard/details_HuggingFaceH4__zephyr-7b-beta_public
+
+  # TruthfulQA (0-shot) (Open LLM Leaderboard)
+  - task: 
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: TruthfulQA (0-shot)
+      type: truthful_qa
+      config: multiple_choice
+      split: validation
+      args:
+        num_few_shot: 0
+    metrics:
+       - type: mc1
+         value: 0.40636474908200737
+       - type: mc1_stderr
+         value: 0.017193835812093893
+       - type: mc2
+         value: 0.5744916942762855
+       - type: mc2_stderr
+         value: 0.015742095840959796
+    source:
+      name: Open LLM Leaderboard
+      url: https://huggingface.co/datasets/open-llm-leaderboard/details_HuggingFaceH4__zephyr-7b-beta_public
+
+  # GSM8k (5-shot) (Open LLM Leaderboard)
+  - task: 
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: GSM8k (5-shot)
+      type: gsm8k
+      split: test
+      args:
+        num_few_shot: 5
+    metrics:
+       - type: acc
+         name: accuracy
+         value: 0.12736921910538287
+       - type: acc_stderr
+         value: 0.009183110326737829
+    source:
+      name: Open LLM Leaderboard
+      url: https://huggingface.co/datasets/open-llm-leaderboard/details_HuggingFaceH4__zephyr-7b-beta_public
+
+  # MMLU (5-Shot) (Open LLM Leaderboard)
+  # ???
+
+  # AlpacaEval (taken from model card)
+  - task: 
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: AlpacaEval
+      type: unknown
+    metrics:
+       - type: unknown
+         name: win rate
+         value: 0.9060
+    source:
+      url: https://tatsu-lab.github.io/alpaca_eval/
+
+  # MT-Bench (taken from model card)
+  - task: 
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: MT-Bench
+      type: unknown
+    metrics:
+       - type: unknown
+         name: score
+         value: 7.34
+    source:
+      url: https://huggingface.co/spaces/lmsys/mt-bench
+---
 <!-- This model card has been generated automatically according to the information the Trainer had access to. You
 should probably proofread and complete it, then remove this comment. -->
 
@@ -86,12 +236,9 @@ Here's how you can run the model using the `pipeline()` function from 🤗 Trans
 # Install transformers from source - only needed for versions <= v4.34
 # pip install git+https://github.com/huggingface/transformers.git
 # pip install accelerate
-
 import torch
 from transformers import pipeline
-
 pipe = pipeline("text-generation", model="HuggingFaceH4/zephyr-7b-beta", torch_dtype=torch.bfloat16, device_map="auto")
-
 # We use the tokenizer's chat template to format each message - see https://huggingface.co/docs/transformers/main/en/chat_templating
 messages = [
     {
@@ -149,12 +296,8 @@ The following hyperparameters were used during training:
 - lr_scheduler_type: linear
 - lr_scheduler_warmup_ratio: 0.1
 - num_epochs: 3.0
-
 ### Training results
-
 The table below shows the full set of DPO training metrics:
-
-
 | Training Loss | Epoch | Step | Validation Loss | Rewards/chosen | Rewards/rejected | Rewards/accuracies | Rewards/margins | Logps/rejected | Logps/chosen | Logits/rejected | Logits/chosen |
 |:-------------:|:-----:|:----:|:---------------:|:--------------:|:----------------:|:------------------:|:---------------:|:--------------:|:------------:|:---------------:|:-------------:|
 | 0.6284        | 0.05  | 100  | 0.6098          | 0.0425         | -0.1872          | 0.7344             | 0.2297          | -258.8416      | -253.8099    | -2.7976         | -2.8234       |
@@ -215,19 +358,13 @@ The table below shows the full set of DPO training metrics:
 | 0.0077        | 2.89  | 5600 | 0.7520          | -4.5586        | -8.3485          | 0.7969             | 3.7899          | -340.4545      | -299.8206    | -2.3078         | -2.3517       |
 | 0.0094        | 2.94  | 5700 | 0.7527          | -4.5542        | -8.3509          | 0.7812             | 3.7967          | -340.4790      | -299.7773    | -2.3062         | -2.3510       |
 | 0.0054        | 2.99  | 5800 | 0.7520          | -4.5169        | -8.3079          | 0.7812             | 3.7911          | -340.0493      | -299.4038    | -2.3081         | -2.3530       |
-
-
 ### Framework versions
-
 - Transformers 4.35.0.dev0
 - Pytorch 2.0.1+cu118
 - Datasets 2.12.0
 - Tokenizers 0.14.0
-
 ## Citation
-
 If you find Zephyr-7B-β is useful in your work, please cite it with:
-
 ```
 @misc{tunstall2023zephyr,
       title={Zephyr: Direct Distillation of LM Alignment}, 
@@ -240,7 +377,6 @@ If you find Zephyr-7B-β is useful in your work, please cite it with:
 ```
 # [Open LLM Leaderboard Evaluation Results](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard)
 Detailed results can be found [here](https://huggingface.co/datasets/open-llm-leaderboard/details_HuggingFaceH4__zephyr-7b-beta)
-
 | Metric                | Value                     |
 |-----------------------|---------------------------|
 | Avg.                  | 52.15   |
