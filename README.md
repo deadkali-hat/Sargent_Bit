@@ -152,7 +152,7 @@ model-index:
       name: Text Generation
     dataset:
       name: AlpacaEval
-      type: unknown
+      type: tatsu-lab/alpaca_eval
     metrics:
        - type: unknown
          name: win rate
