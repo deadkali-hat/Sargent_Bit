@@ -122,7 +122,7 @@ model-index:
     metrics:
        - type: acc
          name: accuracy
-         value: 0.12736921910538287
+         value: 0.6107
     source:
       name: Open LLM Leaderboard
       url: https://huggingface.co/datasets/open-llm-leaderboard/details_HuggingFaceH4__zephyr-7b-beta_public
