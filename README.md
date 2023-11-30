@@ -28,16 +28,9 @@ model-index:
       args:
         num_few_shot: 25
     metrics:
-       - type: acc
-         name: accuracy
-         value: 0.590443686006826
-       - type: acc_stderr
-         value: 0.014370358632472437
        - type: acc_norm
          name: normalized accuracy
          value: 0.6203071672354948
-       - type: acc_norm_stderr
-         value: 0.01418211986697487
     source:
       name: Open LLM Leaderboard
       url: https://huggingface.co/datasets/open-llm-leaderboard/details_HuggingFaceH4__zephyr-7b-beta_public
@@ -48,21 +41,14 @@ model-index:
       name: Text Generation
     dataset:
       name: HellaSwag (10-Shot)
-      type: Rowan/hellaswag
-      split: test # or validation?
+      type: hellaswag
+      split: validation
       args:
         num_few_shot: 10
     metrics:
-       - type: acc
-         name: accuracy
-         value: 0.6491734714200359
-       - type: acc_stderr
-         value: 0.004762534245488399
        - type: acc_norm
          name: normalized accuracy
          value: 0.8435570603465445
-       - type: acc_norm_stderr
-         value: 0.003625323221166244
     source:
       name: Open LLM Leaderboard
       url: https://huggingface.co/datasets/open-llm-leaderboard/details_HuggingFaceH4__zephyr-7b-beta_public
@@ -74,20 +60,13 @@ model-index:
     dataset:
       name: Drop (3-Shot)
       type: drop
-      split: test
+      split: validation
       args:
         num_few_shot: 3
     metrics:
-       - type: em
-         name: exact match
-         value: 0.004928691275167785
-       - type: em_stderr
-         value: 0.0007171872517059793
        - type: f1
          name: f1 score
          value: 0.09662437080536909
-       - type: f1_stderr
-         value: 0.0018807376338089597
     source:
       name: Open LLM Leaderboard
       url: https://huggingface.co/datasets/open-llm-leaderboard/details_HuggingFaceH4__zephyr-7b-beta_public
@@ -104,14 +83,8 @@ model-index:
       args:
         num_few_shot: 0
     metrics:
-       - type: mc1
-         value: 0.40636474908200737
-       - type: mc1_stderr
-         value: 0.017193835812093893
        - type: mc2
          value: 0.5744916942762855
-       - type: mc2_stderr
-         value: 0.015742095840959796
     source:
       name: Open LLM Leaderboard
       url: https://huggingface.co/datasets/open-llm-leaderboard/details_HuggingFaceH4__zephyr-7b-beta_public
@@ -123,6 +96,7 @@ model-index:
     dataset:
       name: GSM8k (5-shot)
       type: gsm8k
+      config: main
       split: test
       args:
         num_few_shot: 5
@@ -130,14 +104,47 @@ model-index:
        - type: acc
          name: accuracy
          value: 0.12736921910538287
-       - type: acc_stderr
-         value: 0.009183110326737829
     source:
       name: Open LLM Leaderboard
       url: https://huggingface.co/datasets/open-llm-leaderboard/details_HuggingFaceH4__zephyr-7b-beta_public
 
   # MMLU (5-Shot)
-  # ???
+  - task: 
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: MMLU (5-Shot)
+      type: cais/mmlu
+      config: all
+      split: test
+      args:
+        num_few_shot: 5
+    metrics:
+       - type: acc
+         name: accuracy
+         value: 0.12736921910538287
+    source:
+      name: Open LLM Leaderboard
+      url: https://huggingface.co/datasets/open-llm-leaderboard/details_HuggingFaceH4__zephyr-7b-beta_public
+
+  # Winogrande (5-shot)
+  - task: 
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: Winogrande (5-shot)
+      type: winogrande
+      config: winogrande_xl
+      split: validation
+      args:
+        num_few_shot: 5
+    metrics:
+       - type: acc
+         name: accuracy
+         value: 0.7774269928966061
+    source:
+      name: Open LLM Leaderboard
+      url: https://huggingface.co/datasets/open-llm-leaderboard/details_HuggingFaceH4__zephyr-7b-beta_public
 
   # AlpacaEval (taken from model card)
   - task: 
