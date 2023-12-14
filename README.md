@@ -30,7 +30,7 @@ model-index:
     metrics:
        - type: acc_norm
          name: normalized accuracy
-         value: 0.6203071672354948
+         value: 62.03071672354948
     source:
       name: Open LLM Leaderboard
       url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=HuggingFaceH4/zephyr-7b-beta
@@ -48,7 +48,7 @@ model-index:
     metrics:
        - type: acc_norm
          name: normalized accuracy
-         value: 0.8435570603465445
+         value: 84.35570603465445
     source:
       name: Open LLM Leaderboard
       url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=HuggingFaceH4/zephyr-7b-beta
@@ -66,7 +66,7 @@ model-index:
     metrics:
        - type: f1
          name: f1 score
-         value: 0.09662437080536909
+         value: 9.662437080536909
     source:
       name: Open LLM Leaderboard
       url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=HuggingFaceH4/zephyr-7b-beta
@@ -84,7 +84,7 @@ model-index:
         num_few_shot: 0
     metrics:
        - type: mc2
-         value: 0.5744916942762855
+         value: 57.44916942762855
     source:
       name: Open LLM Leaderboard
       url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=HuggingFaceH4/zephyr-7b-beta
@@ -103,7 +103,7 @@ model-index:
     metrics:
        - type: acc
          name: accuracy
-         value: 0.12736921910538287
+         value: 12.736921910538287
     source:
       name: Open LLM Leaderboard
       url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=HuggingFaceH4/zephyr-7b-beta
@@ -122,7 +122,7 @@ model-index:
     metrics:
        - type: acc
          name: accuracy
-         value: 0.6107
+         value: 61.07
     source:
       name: Open LLM Leaderboard
       url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=HuggingFaceH4/zephyr-7b-beta
@@ -141,7 +141,7 @@ model-index:
     metrics:
        - type: acc
          name: accuracy
-         value: 0.7774269928966061
+         value: 77.74269928966061
     source:
       name: Open LLM Leaderboard
       url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=HuggingFaceH4/zephyr-7b-beta
