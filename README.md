@@ -33,7 +33,7 @@ model-index:
          value: 0.6203071672354948
     source:
       name: Open LLM Leaderboard
-      url: https://huggingface.co/datasets/open-llm-leaderboard/details_HuggingFaceH4__zephyr-7b-beta_public
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=HuggingFaceH4/zephyr-7b-beta
 
   # HellaSwag (10-shot)
   - task: 
@@ -51,7 +51,7 @@ model-index:
          value: 0.8435570603465445
     source:
       name: Open LLM Leaderboard
-      url: https://huggingface.co/datasets/open-llm-leaderboard/details_HuggingFaceH4__zephyr-7b-beta_public
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=HuggingFaceH4/zephyr-7b-beta
 
   # DROP (3-shot)
   - task: 
@@ -69,7 +69,7 @@ model-index:
          value: 0.09662437080536909
     source:
       name: Open LLM Leaderboard
-      url: https://huggingface.co/datasets/open-llm-leaderboard/details_HuggingFaceH4__zephyr-7b-beta_public
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=HuggingFaceH4/zephyr-7b-beta
 
   # TruthfulQA (0-shot)
   - task: 
@@ -87,7 +87,7 @@ model-index:
          value: 0.5744916942762855
     source:
       name: Open LLM Leaderboard
-      url: https://huggingface.co/datasets/open-llm-leaderboard/details_HuggingFaceH4__zephyr-7b-beta_public
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=HuggingFaceH4/zephyr-7b-beta
 
   # GSM8k (5-shot)
   - task: 
@@ -106,7 +106,7 @@ model-index:
          value: 0.12736921910538287
     source:
       name: Open LLM Leaderboard
-      url: https://huggingface.co/datasets/open-llm-leaderboard/details_HuggingFaceH4__zephyr-7b-beta_public
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=HuggingFaceH4/zephyr-7b-beta
 
   # MMLU (5-Shot)
   - task: 
@@ -125,7 +125,7 @@ model-index:
          value: 0.6107
     source:
       name: Open LLM Leaderboard
-      url: https://huggingface.co/datasets/open-llm-leaderboard/details_HuggingFaceH4__zephyr-7b-beta_public
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=HuggingFaceH4/zephyr-7b-beta
 
   # Winogrande (5-shot)
   - task: 
@@ -144,7 +144,7 @@ model-index:
          value: 0.7774269928966061
     source:
       name: Open LLM Leaderboard
-      url: https://huggingface.co/datasets/open-llm-leaderboard/details_HuggingFaceH4__zephyr-7b-beta_public
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=HuggingFaceH4/zephyr-7b-beta
 
   # AlpacaEval (taken from model card)
   - task: 
